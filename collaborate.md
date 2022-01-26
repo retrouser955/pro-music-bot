@@ -1,4 +1,4 @@
-#Collborating
+# Collborating
 
 anyone is free to collborate! Fork this repo and contact Retro#2448 on Discord or sumit a pull request.
 
