@@ -2,5 +2,10 @@
   "Token": "",
   "Secret": "",
   "HostedOnReplit" : true,
-  "DashboardTheme": "dark"
+  "DashboardTheme": "dark",
+  "Url": "",
+  "Port": "", /*this is only needed if you are not hosting on replit*/
+  "Description": "",
+  "InviteUrl": "",
+  "SupportServerUrl": ""
 }
