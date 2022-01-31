@@ -1,11 +1,12 @@
 {
-  "Token": "",
-  "Secret": "",
-  "HostedOnReplit" : true,
-  "DashboardTheme": "dark",
-  "Url": "",
-  "Port": "",
-  "Description": "",
-  "InviteUrl": "",
-  "SupportServerUrl": ""
+    "Token": "",
+    "Secret": "",
+    "HostedOnReplit" : true,
+    "DashboardTheme": "dark",
+    "Url": "",
+    "Description": "your bot description",
+    "InviteUrl": "your bot invite link. be sure to have application.commands",
+    "SupportServerUrl": "",
+    "BotId": "",
+    "logEveryAction": false
 }
