@@ -97,7 +97,9 @@
 
   client.dashboard.registerCommand('help', 'Shows you the link of the dashboard', '/help');
 
-  client.dashboard.registerCommand('nowplaying', 'what song is playing now', '/np');
+  client.dashboard.registerCommand('nowplaying', 'what song is playing now', '/nowplaying');
+  
+  client.dashboard.registerCommand('queue', 'The server queue', '/queue')
 
   client.dashboard.registerCommand('play', 'Plays a song in a voice channel', '/play [song]');
 
