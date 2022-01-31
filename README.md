@@ -33,3 +33,7 @@ This is a music bot that you can clone on https://replit.com.
 2. create a new moniter with the type HTTPS
 3. give it a name :)
 4. done! you can now close replit
+
+## Kinda not really important
+
+To get emoji access. Add your bot to https://discord.gg/GZQVg6Wqs6
