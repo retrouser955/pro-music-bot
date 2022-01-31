@@ -87,7 +87,6 @@
     secret: Secret || process.env['SECRET'],
     description: String(Description),
     noPortIncallbackUrl: HostedOnReplit,
-    port: 3000,
     inviteUrl: InviteUrl,
     serverUrl: SupportServerUrl
   }
