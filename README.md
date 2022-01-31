@@ -26,3 +26,10 @@ This is a music bot that you can clone on https://replit.com.
 7. Client Token and Secret can be filled by making an env file called TOKEN and putting your token there. The same goes for Client Secret You will just have to create another env called SECRET and put your client secret there. (Make sure to leave the TOKEN and SECRET blank in config.json if you do this.)
 8. While keeping the project running, Invite the bot to the server.
 9. Done!
+
+# Making it 24/7
+
+1. Create an account at https://uptimerobot.com/
+2. create a new moniter with the type HTTPS
+3. give it a name :)
+4. done! you can now close replit
