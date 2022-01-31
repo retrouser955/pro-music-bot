@@ -1,5 +1,6 @@
 (async () => {
   const { Intents, Client, MessageEmbed, Permissions } = require("discord.js")
+  //hello :) hehe
   const {
     Token,
     Secret,
