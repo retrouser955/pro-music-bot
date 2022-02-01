@@ -22,7 +22,7 @@ This is a music bot that you can clone on https://replit.com.
 3. Then copy this repo URL in github URL aka https://github.com/retrouser955/pro-music-bot.git
 4. Create a new application at https://discord.com/developers
 5. ⚠ DO NOT INVITE IT TO YOUR SERVER YET
-6. Fill in all the things in config.json (For replit URL, Run the project and get the link that appeared)
+6. Fill in all the things in config.json (For replit URL, Run the project and get the link that appeared (should end with repl.co)) (YOU HAVE TO FILL EVERYTHING IN OR ELSE IT **WILL NOT** WORK)
 7. While keeping the project running, Invite the bot to the server.
 8. Done!
 
