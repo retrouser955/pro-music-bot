@@ -37,7 +37,7 @@
     console.log(`⏱ | loaded file : ${file}`)
   }
 
-  const rest = new REST({ version: '9' }).setToken(Token);
+  const rest = new REST({ version: '9' }).setToken(Token || process.env['TOKEN']);
 
   try {
     console.log('Started refreshing application [/] commands.');
