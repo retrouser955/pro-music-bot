@@ -13,32 +13,35 @@
     BotId,
     logEveryAction
   } = require("./config.json")
+  //require config file
   const Discord = require("discord.js")
+  //require discord
   const client = new Discord.Client({
     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_VOICE_STATES]
   });
-
+  //create client
   const fs = require('fs')
-
+  //require fs
   const { Routes } = require('discord-api-types/v9');
-
+  //require discord-api-types
   const { REST } = require('@discordjs/rest');
-
+  //require @discordjs/rest
   const { SlashCommandBuilder } = require("@discordjs/builders")
-
+  //require @discordjs/rest
   const cmds = [];
+  //we will register cmds
   client.commands = new Discord.Collection();
   const commandFiles = fs.readdirSync('./commands').filter(files => files.endsWith('.js'))
-
+  //fs stuff dont worry
   for(const file of commandFiles) {
     const command = require(`./commands/${file}`)
     client.commands.set(command.name, command)
     cmds.push(command.data.toJSON());
     console.log(`⏱ | loaded file : ${file}`)
   }
-
+  //loading files
   const rest = new REST({ version: '9' }).setToken(Token || process.env['TOKEN']);
-
+  // create a new REST
   try {
     console.log('Started refreshing application [/] commands.');
     await rest.put(
@@ -49,21 +52,21 @@
   } catch (error) {
     console.error(error);
   }
-
+  //slash cmds
   
 
   await client.login(Token || process.env['TOKEN'])
-
+  //login
   const { Player, QueueRepeatMode } = require("discord-player")
-
+//require discord-player
   const playdl = require("play-dl")
-
+//same with play-dl
   const player = new Player(client)
-
+//create the player client
   process.on("uncaughtException", async (err) => {
     console.log(err)
   })
-
+//anticrash
   const Database = require('easy-json-database')
   const db = new Database("./dashsettings.json", {
     snapshots: {
@@ -72,16 +75,17 @@
       folder: './backups/'
     }
   });
-
+//db
   const Dashboard = require("discord-easy-dashboard");
 
-  
+  //require discord-easy-dashboard
 
   client.on('guildCreate', async (guild) => {
     db.set(`${guild.id}-thumbnail`, false)
     db.set(`${guild.id}-dj`, "1234567")
     db.set(`${guild.id}-announce`, true)
   })
+  //add stuff ig
   client.on('ready', () => {
     console.log(`${client.user.tag} is ready!`)
     console.log(`Invite your bot at https://discord.com/oauth2/authorize?client_id=${BotId}&permissions=240754424128&scope=bot%20applications.commands`)
@@ -146,10 +150,6 @@
   const thumbnailGetter = (discordClient, guild) => db.get(`${guild.id}-thumbnail`)
 
   client.dashboard.addBooleanInput(`Show song thumbnails?`, `You might want this disabled as some thumbnail might have nsfw content`, thumbnailSetter, thumbnailGetter)
-
-  client.on("ready", () => {
-    console.log(`${client.user.tag} is ready to play!`)
-  })
 
   player.on("trackStart", async (queue, track) => {
     const metaID = queue.metadata.guild
