@@ -23,9 +23,10 @@ This is a music bot that you can clone on https://replit.com.
 4. Create a new application at https://discord.com/developers
 5. ⚠ DO NOT INVITE IT TO YOUR SERVER YET
 6. Fill in all the things in config.json (For replit URL, Run the project and get the link that appeared)
-7. Client Token and Secret can be filled by making an env file called TOKEN and putting your token there. The same goes for Client Secret You will just have to create another env called SECRET and put your client secret there. (Make sure to leave the TOKEN and SECRET blank in config.json if you do this.)
-8. While keeping the project running, Invite the bot to the server.
-9. Done!
+7. While keeping the project running, Invite the bot to the server.
+8. Done!
+
+### NOTE: To make TOKEN and SECRET more private, click on the lock icon located on the left hand side of the screen and add a new secet called TOKEN and set the value to bot's token. Same goes for secret. (Keep Token and Secret fields blank in config.json if you do this)
 
 # Making it 24/7
 
