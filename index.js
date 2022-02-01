@@ -82,6 +82,10 @@
     db.set(`${guild.id}-dj`, "1234567")
     db.set(`${guild.id}-announce`, true)
   })
+  client.on('ready', () => {
+    console.log(`${client.user.tag} is ready!`)
+    console.log(`Invite your bot at https://discord.com/oauth2/authorize?client_id=${BotId}&permissions=240754424128&scope=bot%20applications.commands`)
+  })
 
   const options = {
     theme: DashboardTheme,
