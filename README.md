@@ -7,10 +7,10 @@ This is a music bot that you can clone on https://replit.com.
 
 ### To do list
 
-1 | Write readme
+1 | Write readme (half done)
 
 
-2 | Improve stuff
+2 | Improve stuff (nah not done)
 
 ## THIS REPO IS IN DEVELOPMENT! TO COLLABROATE CONTACT Retro#2448 ON DISCORD!
 
