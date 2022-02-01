@@ -26,7 +26,7 @@ This is a music bot that you can clone on https://replit.com.
 7. While keeping the project running, Invite the bot to the server.
 8. Done!
 
-### NOTE: To make TOKEN and SECRET more private, click on the lock icon located on the left hand side of the screen and add a new secet called TOKEN and set the value to bot's token. Same goes for secret. (Keep Token and Secret fields blank in config.json if you do this)
+#### NOTE: To make TOKEN and SECRET more private, click on the lock icon located on the left hand side of the screen and add a new secet called TOKEN (It is case sensitive) and set the value to bot's token. Same goes for secret. Just add a new secret called SECRET (It is case sensitive) and set your bot secret to it. (Keep Token and Secret fields blank in config.json if you do this)
 
 # Making it 24/7
 
