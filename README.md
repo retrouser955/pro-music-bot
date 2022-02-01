@@ -32,8 +32,9 @@ This is a music bot that you can clone on https://replit.com.
 
 1. Create an account at https://uptimerobot.com/
 2. create a new moniter with the type HTTPS
-3. give it a name :)
-4. done! you can now close replit
+3. set it to your dashboard link
+4. give it a name :)
+5. done! you can now close replit
 
 ## Kinda not really important
 
