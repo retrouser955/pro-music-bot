@@ -89,6 +89,8 @@
   client.on('ready', () => {
     console.log(`${client.user.tag} is ready!`)
     console.log(`Invite your bot at https://discord.com/oauth2/authorize?client_id=${BotId}&permissions=240754424128&scope=bot%20applications.commands`)
+    if(Url === null) return
+    console.log(`Your redirect URL is ${Url}/auth/login`)
   })
 
   const options = {
