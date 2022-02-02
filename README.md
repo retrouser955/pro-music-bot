@@ -24,7 +24,8 @@ This is a music bot that you can clone on https://replit.com.
 5. ⚠ DO NOT INVITE IT TO YOUR SERVER YET
 6. Fill in all the things in config.json (For replit URL, Run the project and get the link that appeared (should end with repl.co)) (YOU HAVE TO FILL EVERYTHING IN OR ELSE IT **WILL NOT** WORK)
 7. While keeping the project running, Invite the bot to the server.
-8. Done!
+8. Follow steps in (REDIRECT.md)[https://github.com/retrouser955/pro-music-bot/blob/main/REDIRECT.md]
+9. Done!
 
 #### NOTE: To make TOKEN and SECRET more private, click on the lock icon located on the left hand side of the screen and add a new secret called TOKEN (It is case sensitive) and set the value to bot's token. Same goes for secret. Just add a new secret called SECRET (It is case sensitive) and set your bot secret to it. (Keep Token and Secret fields blank in config.json if you do this
 
