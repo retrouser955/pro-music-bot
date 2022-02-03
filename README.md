@@ -40,3 +40,7 @@ This is a music bot that you can clone on https://replit.com.
 ## Kinda not really important
 
 To get emoji access. Add your bot to https://discord.gg/GZQVg6Wqs6
+
+# Support me?
+
+Well I don't like asking people for funding so just star is project to show your support :)
