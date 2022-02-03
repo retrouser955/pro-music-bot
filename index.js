@@ -201,6 +201,7 @@
     if(interaction.commandName === "loop") return client.commands.get('loop').execute(interaction, player, db, Permissions, QueueRepeatMode)
     if(interaction.commandName === "nowplaying") return client.commands.get('nowplaying').execute(interaction, player, Discord, MessageEmbed)
     if(interaction.commandName === "queue") return client.commands.get('queue').execute(interaction, player, Discord, MessageEmbed)
+    if(interaction.commandName === 'volume') return client.commands.get('volume').execute(player, interaction, MessageEmbed, Discord)
   })
   return
 })()
