@@ -19,7 +19,8 @@ module.exports = {
       .setColor(`RANDOM`)
       .setTitle(`Queue for ${interaction.guild.name}`)
       .setDescription(
-        `${tracks.join("\n")}${
+        `Now Playing : ${currentTrack.title}\n
+        ${tracks.join("\n")}${
         queue.tracks.length > tracks.length
           ? `\n...${
           queue.tracks.length - tracks.length === 1
@@ -29,7 +30,6 @@ module.exports = {
           : ""
         }`
       )
-      .setFooter(`Now Playing : ${currentTrack.title}`);
     return interaction.editReply({ embeds: [embed] });
   }
 };
