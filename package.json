@@ -20,10 +20,12 @@
     "discord.js": "^13.3.1",
     "easy-json-database": "^1.5.0",
     "ffmpeg-static": "^4.4.1",
-    "nodemon": "^2.0.15",
-    "play-dl": "^1.7.8"
+    "https": "^1.0.0",
+    "play-dl": "^1.7.8",
+    "valid-url": "^1.0.9"
   },
   "devDependencies": {
-    "node": "^16.13.1"
+    "node": "^16.13.1",
+    "nodemon": "^2.0.15"
   }
 }
