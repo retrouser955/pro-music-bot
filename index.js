@@ -202,6 +202,8 @@
     if(interaction.commandName === "nowplaying") return client.commands.get('nowplaying').execute(interaction, player, Discord, MessageEmbed)
     if(interaction.commandName === "queue") return client.commands.get('queue').execute(interaction, player, Discord, MessageEmbed)
     if(interaction.commandName === 'volume') return client.commands.get('volume').execute(player, interaction, MessageEmbed, Discord)
+    if(interaction.commandName === 'nightcore') return client.commands.get('nightcore').execute(player, interaction, MessageEmbed, db)
+    if(interaction.commandName === 'screenshot') return client.commands.get('screenshot').execute(interaction)
   })
   return
 })()
