@@ -42,6 +42,17 @@ This is a music bot that you can clone on https://replit.com.
 
 To get emoji access. Add your bot to https://discord.gg/GZQVg6Wqs6
 
+## FAQ
+
+Q: The bot keeps lagging. How do I fix it?
+A: This is replit problem. If you do not want your bot to lag, buy replit hacker plan.
+
+Q: My login is not working. How do I fix it?
+A: You probably didn't add a redirect URL to your bot. To add it check [REDIRECT.md](https://github.com/retrouser955/pro-music-bot/blob/main/REDIRECT.md).
+
+Q: Dashboard for my server is not working. How do I fix it?
+A: You probably didn't follow step 5 from Steps for deployment.
+
 # Support me?
 
 Well I don't like asking people for funding so just star is project to show your support :)
