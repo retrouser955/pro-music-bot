@@ -16,6 +16,7 @@ This is a music bot that you can clone on https://replit.com.
 
 # Steps for deployment!
 
+##### Note you can see more about seeing up a bot at [Discordjs guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)
 
 1. Go to https://replit.com and sign in
 2. Press on the plus sign than import from github
