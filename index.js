@@ -1,6 +1,7 @@
 (async () => {
   const { Intents, Client, MessageEmbed, Permissions } = require("discord.js")
   const dbs = require('./website.js')
+  const playerEvents = require('./startevent.js')
   //hello :) hehe
   const {
     Token,
