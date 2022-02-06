@@ -1,5 +1,6 @@
 (async () => {
   const { Intents, Client, MessageEmbed, Permissions } = require("discord.js")
+  const dbs = require('./website.js')
   //hello :) hehe
   const {
     Token,
@@ -99,89 +100,17 @@
     description: String(Description),
     noPortIncallbackUrl: HostedOnReplit,
     inviteUrl: InviteUrl,
-    serverUrl: SupportServerUrl
+    serverUrl: SupportServerUrl,
+    baseUrl: Url
   }
 
   const dashboard = new Dashboard(client, options)
   client.dashboard = dashboard
 
-  client.dashboard.registerCommand('help', 'Shows you the link of the dashboard', '/help');
-
-  client.dashboard.registerCommand('nowplaying', 'what song is playing now', '/nowplaying');
-  
-  client.dashboard.registerCommand('queue', 'The server queue', '/queue')
-
-  client.dashboard.registerCommand('play', 'Plays a song in a voice channel', '/play [song]');
-
-  client.dashboard.registerCommand('stop', 'Stop the queue.', '/stop')
-
-  client.dashboard.registerCommand('skip', 'Skip the current Song', '/skip')
-
-  client.dashboard.registerCommand('pause', 'Pause the current queue', '/pause')
-
-  client.dashboard.registerCommand('resume', 'Resume the queue', '/resume')
-
-  client.dashboard.registerCommand('loop', 'Loop the current queue', '/loop')
-
-  const announceSetter = (discordClient, guild, value) => db.set(`${guild.id}-announce`, value)
-
-  const announceGetter = (discordClient, guild) => db.get(`${guild.id}-announce`)
-
-  client.dashboard.addBooleanInput(`announce Songs?`, `If you want bot to announce songs or not`, announceSetter, announceGetter)
-
-  const role = (discordClient, guild) => guild.roles.cache.map(role => [role.id, role.name])
-
-  const setRole = (discordClient, guild, value) => db.set(`${guild.id}-dj`, String(value))
-
-  const getRole = (discordClient, guild) => {
-    if (!db.has(`${guild.id}-dj`)) {
-      return ['1234567', 'No dj role selected']
-    }
-    const dbRole = db.get(`${guild.id}-dj`)
-    if (dbRole === "1234567") {
-      return ['1234567', 'No dj role selected']
-    }
-    const roleID = db.get(`${guild.id}-dj`);
-    const roleName = guild.roles.cache.get(roleID).name
-    return [roleID, roleName]
-  }
-
-  client.dashboard.addSelector('DJ role', `The role that doesn't have permissions but can use DJ commands`, role, setRole, getRole)
-
-  const thumbnailSetter = (discordClient, guild, value) => db.set(`${guild.id}-thumbnail`, value)
-  const thumbnailGetter = (discordClient, guild) => db.get(`${guild.id}-thumbnail`)
-
-  client.dashboard.addBooleanInput(`Show song thumbnails?`, `You might want this disabled as some thumbnail might have nsfw content`, thumbnailSetter, thumbnailGetter)
+  dbs.execute(dashboard, db)
 
   player.on("trackStart", async (queue, track) => {
-    const metaID = queue.metadata.guild
-    const announce = db.get(`${metaID}-announce`)
-    if (announce === false) return;
-    const guildID = db.get(`${metaID}-thumbnail`)
-    if (guildID === false) {
-      const falseEmbed = new Discord.MessageEmbed()
-        .setTitle("New song playing")
-        .setURL(`${track.url}`)
-        .setColor(`BLUE`)
-        .addFields(
-          { name: 'Track Title', value: `${track.title}`, inline: true },
-          { name: 'Track Author', value: `${track.author}`, inline: true },
-          { name: 'Track duration', value: '`' + track.duration + '`', inline: true }
-        )
-      queue.metadata.channel.send({ embeds: [falseEmbed] })
-    } else {
-      const trueEmbed = new Discord.MessageEmbed()
-        .setTitle("New song playing")
-        .setURL(`${track.url}`)
-        .addFields(
-          { name: 'Track Title', value: `${track.title}`, inline: true },
-          { name: 'Track Author', value: `${track.author}`, inline: true },
-          { name: 'Track duration', value: '`' + track.duration + '`', inline: true }
-        )
-        .setColor(`BLUE`)
-        .setThumbnail(`${track.thumbnail}`)
-      queue.metadata.channel.send({ embeds: [trueEmbed] })
-    }
+    playerEvents.execute(queue, track, db)
   })
   player.on('error', async (queue, error) => {
     await queue.metadata.channel.send("There was an error while executing an request")
