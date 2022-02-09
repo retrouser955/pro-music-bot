@@ -24,6 +24,10 @@ module.exports = {
           if (source === "youtube") {
             return (await playdl.stream(track.url, { discordPlayerCompatibility : true })).stream;
           }
+	  if (source === "spotify") {
+            await interaction.channel.send(`Streaming from spotify is not supported. The bot maintainer (Retro#2448) will fix it ASAP\n Replying to ${interaction.author}'s request`)
+	    return (await playdl.stream("https://www.youtube.com/watch?v=jhFDyDgMVUI", { discordPlayerCompatibility : true } )).stream;
+	  }
         }
       })
       try {
