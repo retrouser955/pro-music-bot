@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders")
+const { Url } = require('../config.json')
 module.exports = {
   name: "help",
   description: "help command",
@@ -8,7 +9,7 @@ module.exports = {
   async execute(interaction, Discord, MessageEmbed) {
     const embed = new Discord.MessageEmbed()
       .setTitle(`Hey ${interaction.member.user.username}!`)
-      .setDescription(`**[Our Command list is launched here!](https://the-music-project.repl.co/commands)**`)
+      .setDescription(`**[Our Command list is launched here!](${Url}/commands)**`)
       .setColor(`GREEN`)
     return interaction.reply({ embeds: [embed] })
   }
