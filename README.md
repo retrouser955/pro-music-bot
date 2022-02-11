@@ -59,3 +59,5 @@ A: You probably didn't follow step 5 from Steps for deployment.
 # Support me?
 
 Well I don't like asking people for funding so just star is project to show your support :)
+
+Copyright (c) 2022 Retro Bots
