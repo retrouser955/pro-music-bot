@@ -44,7 +44,6 @@ module.exports = {
                 embeds: [embed]
             })
             }
-        }
         if(boolean === false) {
             if(!interaction.member.permissions.has(Permissions.FLAGS.MANAGE_GUILD)) return interaction.reply({ content: "You need `MANAGE_SERVER` permission to use this command", ephemeral: true })
         }
@@ -73,4 +72,4 @@ module.exports = {
                 embeds: [embed]
             })
         }
-}
+        }
