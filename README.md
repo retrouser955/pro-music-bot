@@ -9,7 +9,9 @@ This is a music bot that you can clone on https://replit.com.
 
 Improve stuff (half done)
 
-## THIS REPO IS IN DEVELOPMENT! TO COLLABROATE CONTACT Retro#2448 ON DISCORD!
+# Collaboration
+
+Collaboration are welcome. Check [collaborate.md](https://github.com/retrouser955/pro-music-bot/blob/main/collaborate.md)
 
 # Steps for deployment!
 
