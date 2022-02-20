@@ -15,7 +15,7 @@ module.exports = {
     if (!interaction.member.voice.channelId) return interaction.reply({ content: "You are not in a voice channel!", ephemeral: true });
     if (interaction.guild.me.voice.channelId && interaction.member.voice.channelId !== interaction.guild.me.voice.channelId) return interaction.reply({ content: "You are not in my voice channel!", ephemeral: true });
     const songName = interaction.options.get("song").value
-    if(String(songName).toLowerCase().startsWith('https://spotify.com')) return interaction.reply({ content: "Spotify is not supported at the moment!", ephemeral: true })
+    if(String(songName).toLowerCase().startsWith('https://open.spotify.com')) return interaction.reply({ content: "Spotify is not supported at the moment!", ephemeral: true })
       await interaction.deferReply();
       const queue = player.createQueue(interaction.guild, {
         metadata: {
