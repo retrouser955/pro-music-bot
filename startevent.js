@@ -1,3 +1,4 @@
+const { MessageEmbed } = require('discord.js')
 module.exports = {
     name: "event",
     description: "events of bot",
@@ -7,7 +8,7 @@ module.exports = {
         if (announce === false) return;
         const guildID = db.get(`${metaID}-thumbnail`)
         if (guildID === false) {
-            const falseEmbed = new Discord.MessageEmbed()
+            const falseEmbed = new MessageEmbed()
             .setTitle("New song playing")
             .setURL(`${track.url}`)
             .setColor(`BLUE`)
@@ -18,7 +19,7 @@ module.exports = {
             )
         queue.metadata.channel.send({ embeds: [falseEmbed] })
         } else {
-            const trueEmbed = new Discord.MessageEmbed()
+            const trueEmbed = new MessageEmbed()
             .setTitle("New song playing")
             .setURL(`${track.url}`)
             .addFields(
