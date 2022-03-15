@@ -23,9 +23,16 @@ module.exports = {
           guild: interaction.guildId
         },
         async onBeforeCreateStream(track, source, _queue) {
-          if (source === "youtube") {
-            return (await playdl.stream(track.url, { discordPlayerCompatibility : true })).stream;
+	  try {
+          if (track.url.includes("youtube.com"))
+            return (await playdl.stream(track.url, { discordPlayerCompatibility: true })).stream;
+          else if (track.url.includes("spotify.com") || track.url.includes("soundcloud")) {
+            return (await playdl.stream(await playdl.search(`${track.author} ${track.title} lyric`, { limit: 1, source: { youtube: "video" } }).then(x => x[0].url), { discordPlayerCompatibility: true })).stream;
           }
+        } catch {
+          interaction.followUp({ embeds: [{ description: `An error occurred while attempting to play [${track.title}](${track.url}).`, color: 0xb84e44 }] });
+          return (await playdl.stream("https://www.youtube.com/watch?v=Wch3gJG2GJ4", { quality: 0, discordPlayerCompatibility: true })).stream;
+        }
         }
       })
       try {
