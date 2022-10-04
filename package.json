@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "node": "^16.13.1",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "python": "^0.0.4"
   }
 }
